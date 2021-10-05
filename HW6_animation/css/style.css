@@ -1,0 +1,152 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+body{
+	overflow: hidden;
+}
+.wrapp{
+	display: flex;
+}
+.wrapp>div{
+	height: 100vh;
+}
+
+.left__side{
+	background: rgb(202, 120, 237);
+	width: 33vw;
+	transform: translate(-33vw,0);	
+	animation-name: slideFromLeft;
+	animation-duration: 1s;
+	animation-fill-mode: both;
+	animation-timing-function: ease;
+}
+@keyframes slideFromLeft {
+  from {
+    transform: translate(-33vw,0);
+  }
+
+  to {
+    transform: translate(0,0);
+  }
+}
+.right__side{
+	background: rgb(202, 120, 237);
+	width: 33vw;
+	transform: translate(33vw,0);
+	animation-name: slideFromRight;
+	animation-duration: 1s;
+	animation-fill-mode: both;
+	animation-timing-function: ease;
+}
+
+@keyframes slideFromRight {
+  from {
+    transform: translate(33vw,0);
+  }
+
+  to {
+    transform: translate(0,0);
+  }
+}
+
+.center{
+	background: rgb(188, 213, 244);
+	width: 34vw;
+	transform: translate(0,100vh);
+	animation-name: slideFromCenter;
+	animation-duration: 1s;
+	animation-fill-mode: both;
+	animation-timing-function: ease;
+	animation-delay: 0.5s;
+}
+
+@keyframes slideFromCenter {
+  from {
+    transform: translate(0,100vh);
+  }
+
+  to {
+    transform: translate(0,0);
+  }
+}
+
+.center img{
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    animation-name: opacityCenter;
+    opacity: 0;
+    animation-delay: 1.5s;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes opacityCenter {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.center p{
+	font-family: 'Anton', sans-serif;
+	font-size: 15px;
+	text-align: center;
+	animation-name: opacityCenterText;
+    opacity: 0;
+    animation-delay: 2s;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes opacityCenterText {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.right__side img, .left__side img{
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    animation-name: opacitySides;
+    opacity: 0;
+    animation-delay: 2.7s;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes opacitySides {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.left__side p, .right__side p{
+	font-family: 'Anton', sans-serif;
+	font-size: 15px;
+	text-align: center;
+	animation-name: opacityCenterText;
+    opacity: 0;
+    animation-delay: 3.5s;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes opacityCenterText {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
